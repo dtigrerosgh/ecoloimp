@@ -1,1 +1,19 @@
+:root{--green:#18a957;--green2:#0f7a3c;--bg:#f4f6f0}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui}
+body{background:var(--bg)}
+header{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:10px 18px;border-bottom:2px solid #e8f5e9}
+.logo{display:flex;gap:8px;align-items:center;font-weight:800;color:var(--green)} .logo img{height:38px}
+nav{display:flex;gap:6px} nav a{padding:8px 12px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;color:#475569;text-decoration:none}
+nav a.active{background:#e8f5e9;color:var(--green2)} .hamb{display:none}
+section{max-width:1150px;margin:auto;padding:24px 18px;display:none} section.active{display:block}
+.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 20px rgba(0,0,0,.06);border:1px solid #e2e8f0;margin-bottom:16px}
+.btn{border:0;padding:11px 18px;border-radius:10px;font-weight:800;cursor:pointer} .btn.primary{background:var(--green);color:#fff} .btn:disabled{background:#94a3b8}
+input,select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:10px;margin-top:6px}
+#loginPage{display:flex;min-height:100vh;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff 0%,#e8f5e9 100%)}
+.login-box{width:100%;max-width:380px;text-align:center} .login-box img{height:52px;margin-bottom:12px}
+.hidden{display:none !important}
+table{width:100%;border-collapse:collapse;font-size:13px} th{padding:10px;background:#f8fafc;color:#64748b;text-align:left} td{padding:10px;border-top:1px solid #f1f5f9}
+tr.selected{background:#dcfce7} .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px} .grid3{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.btn-sel{border:0;border-radius:8px;padding:7px 12px;font-weight:800;font-size:12px;cursor:pointer} .btn-sel.sel{background:var(--green);color:#fff} .btn-sel.hecha{background:#16a34a;color:#fff}
+@media(max-width:950px){nav{display:none;position:absolute;top:60px;left:12px;right:12px;background:#fff;flex-direction:column;padding:14px;border-radius:14px}nav.open{display:flex}.hamb{display:block}.grid2,.grid3{grid-template-columns:1fr}}
 
