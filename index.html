@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECOLOIMP S.A.</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div id="loginPage">
+  <div class="card login-box">
+    <img src="logo.png" alt="ECOLOIMP">
+    <h2>Iniciar Sesión</h2>
+    <p id="loadStatus" style="font-size:13px;font-weight:700;margin:10px 0;color:#d97706">⏳ Cargando data/clientes.txt...</p>
+    <div style="text-align:left;margin-top:10px">
+      <label>Usuario</label><input id="lgUser" placeholder="tecnico1">
+      <label style="margin-top:12px;display:block">Contraseña</label><input id="lgPass" type="password" value="1234">
+    </div>
+    <button id="btnLogin" class="btn primary" style="width:100%;margin-top:16px" onclick="login()" disabled>⏳ Esperando archivos txt...</button>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+<header>
+  <div class="logo"><img src="logo.png"> ECOLOIMP</div>
+  <div class="hamb" onclick="document.querySelector('nav').classList.toggle('open')">☰</div>
+  <nav>
+    <a id="m-bienvenido" class="active" onclick="showPage('bienvenido')">Bienvenido</a>
+    <a onclick="showPage('visitas')">Visita Técnicas</a>
+    <a onclick="showPage('conteos')">Conteos</a>
+    <a onclick="showPage('inventarios')">Inventarios</a>
+    <a class="logout" onclick="logout()">Cerrar (<span id="userLabel"></span>)</a>
+  </nav>
+</header>
+<section id="pg-bienvenido" class="active">
+  <div class="card"><h1>Bienvenido, <span id="userBienvenido"></span></h1><p id="resumenCarga"></p></div>
+  <div class="grid3">
+    <div class="card"><strong id="kpiClientes">0</strong> Clientes</div>
+    <div class="card"><strong id="kpiImpresoras">0</strong> Impresoras</div>
+    <div class="card"><strong id="kpiVisitas">0</strong> Visitas</div>
+    <div class="card"><strong id="kpiTecnicos">0</strong> Técnicos</div>
+  </div>
+  <div class="card"><table><thead><tr><th>SERIE</th><th>MODELO</th><th>CLIENTE</th><th>ACCIÓN</th></tr></thead><tbody id="dashBody"></tbody></table></div>
+</section>
+<section id="pg-visitas"><div class="card"><h3>Visita Técnica</h3><label>Cliente</label><select id="vtCliente" onchange="updateVisitaPrinterTable()"></select><label>Filtro</label><input id="vtPrinterFilter" oninput="updateVisitaPrinterTable()"><p id="vtSelectedPrinterStatus"></p><div style="max-height:300px;overflow:auto;border:1px solid #e2e8f0;border-radius:10px"><table><tbody id="vtPrinterBody"></tbody></table></div><label>Técnico</label><select id="vtTecnico"></select><button class="btn primary" style="width:100%;margin-top:10px" onclick="guardarVisita()">Guardar</button></div></section>
+<section id="pg-conteos"><div class="card"><h3>Conteos</h3><select id="ctCliente" onchange="cargarConteos()"></select><table><tbody id="ctBody"></tbody></table><button class="btn primary" onclick="guardarConteos()">Guardar</button></div></section>
+<section id="pg-inventarios"><div class="card"><h3>Inventario</h3><input id="invScan" placeholder="Serie" onkeydown="if(event.key==='Enter') agregarInventario()"><button class="btn primary" onclick="agregarInventario()">Agregar</button><table><tbody id="invBody"></tbody></table></div></section>
+</div>
+
+<script>
+let DB_visitaPrinter=null;
+function $(id){return document.getElementById(id)}
+function norm(s){return (s||'').toLowerCase()}
+function getUsuarioActual(){return localStorage.getItem('ecoloimp_session')||'Invitado'}
+function keyVisita(){return 'visitas_'+getUsuarioActual()}
+
+// 1. CARGA PRIMERO - SE EJECUTA AL INICIAR LA PÁGINA
+let DB_USUARIOS=[];
+let DB_CLIENTES=[], DB_IMPRESORAS=[], DB_TECNICOS=[];
+let DATOS_LISTOS=false;
+
+async function cargarDatosPrimero(){
+  $("loadStatus").textContent='⏳ Cargando usuarios.txt, clientes.txt...';
+  $("btnLogin").disabled=true;
+  try{
+    const [uTxt,cTxt,iTxt,tTxt] = await Promise.all([
+      fetch('data/usuarios.txt?v='+Date.now()).then(r=>{if(!r.ok) throw new Error('No se encontró data/usuarios.txt'); return r.text()}),
+      fetch('data/clientes.txt?v='+Date.now()).then(r=>{if(!r.ok) throw new Error('No se encontró data/clientes.txt'); return r.text()}),
+      fetch('data/impresoras.txt?v='+Date.now()).then(r=>{if(!r.ok) throw new Error('No se encontró data/impresoras.txt'); return r.text()}),
+      fetch('data/tecnicos.txt?v='+Date.now()).then(r=>{if(!r.ok) throw new Error('No se encontró data/tecnicos.txt'); return r.text()})
+    ]);
+    
+    // USUARIOS: usuario|clave|nombre|rol
+    DB_USUARIOS = uTxt.split('\n').filter(l=>l.trim()&&!l.startsWith('#')).map(l=>{
+      const p=l.split(/[|,;]/).map(x=>x.trim());
+      return {usuario:p[0]||'', clave:p[1]||'', nombre:p[2]||p[0]||'', rol:(p[3]||'tecnico').toLowerCase()}
+    });
+    
+    DB_CLIENTES = cTxt.split('\n').filter(l=>l.trim()&&!l.startsWith('#')).map(l=>{const p=l.split(/[|,;]/); return {codigo:p[0].trim(), nombre:p.slice(1).join(' ').trim()}});
+    // IMPRESORAS: cliente|codigo|modelo|serie|sucursal|area|ubicacion|bodega
+    DB_IMPRESORAS = iTxt.split('\n').filter(l=>l.trim()&&!l.startsWith('#')).map(l=>{
+      const p=l.split(/[|,;]/).map(x=>x.trim());
+      return {cliente:p[0],codigo:p[1],modelo:p[2],serie:p[3],sucursal:p[4],area:p[5],ubicacion:p[6],bodega:p[7]}
+    });
+    DB_TECNICOS = tTxt.split('\n').filter(l=>l.trim()&&!l.startsWith('#')).map(l=>{const p=l.split(/[|,;]/); return {codigo:p[0].trim(), nombre:p.slice(1).join(' ').trim()}});
+    
+    DATOS_LISTOS=true;
+    $("loadStatus").innerHTML=`✅ ${DB_USUARIOS.length} usuarios, ${DB_CLIENTES.length} clientes, ${DB_IMPRESORAS.length} impresoras cargados<br><span style="font-size:10px;color:#64748b">Prueba: ${DB_USUARIOS[0]?.usuario} / ${DB_USUARIOS[0]?.clave}</span>`;
+    $("loadStatus").style.color='#16a34a';
+    $("btnLogin").disabled=false;
+    $("btnLogin").textContent='Iniciar Sesión';
+    
+    if(localStorage.getItem('ecoloimp_session')) iniciar();
+    
+  }catch(e){
+    $("loadStatus").textContent='❌ '+e.message;
+    $("loadStatus").style.color='#dc2626';
+    alert('ERROR:\n'+e.message+'\n\nCrea data/usuarios.txt');
+  }
+}
+
+function llenarSelects(){
+  if(!DATOS_LISTOS) return;
+  const htmlC = '<option value="">-- Seleccione Cliente --</option>'+DB_CLIENTES.map(c=>`<option value="${c.codigo}">${c.codigo} - ${c.nombre}</option>`).join('');
+  $("vtCliente").innerHTML=htmlC; $("ctCliente").innerHTML=htmlC;
+  $("vtTecnico").innerHTML=DB_TECNICOS.map(t=>`<option value="${t.codigo}">${t.codigo} - ${t.nombre}</option>`).join('');
+  $("kpiClientes").textContent=DB_CLIENTES.length; $("kpiImpresoras").textContent=DB_IMPRESORAS.length; $("kpiTecnicos").textContent=DB_TECNICOS.length;
+  $("resumenCarga").textContent=`Datos cargados desde data/: ${DB_CLIENTES.length} clientes, ${DB_IMPRESORAS.length} impresoras`;
+  actualizarDash(); updateVisitaPrinterTable(); cargarConteos();
+}
+
+function login(){
+  if(!DATOS_LISTOS){ alert('Los txt aún no cargan'); return; }
+  const user = $("lgUser").value.trim();
+  const pass = $("lgPass").value.trim();
+  if(!user || !pass) return alert("Ingresa usuario y clave");
+  
+  const encontrado = DB_USUARIOS.find(u => u.usuario.toLowerCase() === user.toLowerCase() && u.clave === pass);
+  
+  if(!encontrado){
+    alert(`❌ Usuario o clave incorrecta\n\nUsuarios disponibles en txt: ${DB_USUARIOS.map(u=>u.usuario).join(', ')}`);
+    return;
+  }
+  
+  // Guarda objeto completo
+  localStorage.setItem('ecoloimp_session', encontrado.usuario);
+  localStorage.setItem('ecoloimp_nombre', encontrado.nombre);
+  localStorage.setItem('ecoloimp_rol', encontrado.rol);
+  iniciar();
+}
+
+function iniciar(){
+  if(!DATOS_LISTOS) return;
+  $("loginPage").classList.add('hidden');
+  $("app").classList.remove('hidden');
+  const nombre = localStorage.getItem('ecoloimp_nombre') || localStorage.getItem('ecoloimp_session');
+  const rol = localStorage.getItem('ecoloimp_rol') || 'tecnico';
+  $("userLabel").textContent = `${nombre} (${rol})`;
+  $("userBienvenido").textContent = nombre;
+  
+  // Si es admin puede ver todo, si es tecnico solo lo suyo (opcional)
+  llenarSelects(); 
+  actualizarVisitaHistorialTabla(); 
+  cargarInventario();
+  showPage('bienvenido');
+}
+
+function logout(){
+  localStorage.removeItem('ecoloimp_session');
+  localStorage.removeItem('ecoloimp_nombre');
+  localStorage.removeItem('ecoloimp_rol');
+  location.reload();
+}
+
+function getUsuarioActual(){ return localStorage.getItem('ecoloimp_nombre') || localStorage.getItem('ecoloimp_session') || 'Invitado' }
+
+function showPage(p){document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));$("pg-"+p).classList.add('active')}
+function updateVisitaPrinterTable(){
+  const client = ($("vtCliente").value||"").trim();
+  const q = norm($("vtPrinterFilter")?.value);
+  if(!client){
+    $("vtPrinterBody").innerHTML = `<tr><td colspan="5" style="text-align:center;color:#94a3b8">👆 Selecciona cliente</td></tr>`;
+    return;
+  }
+  const base = DB_IMPRESORAS.filter(p => p.cliente === client);
+  const rows = base.filter(p => !q || norm(`${p.serie} ${p.modelo} ${p.sucursal} ${p.area} ${p.ubicacion} ${p.codigo}`).includes(q));
+  
+  $("vtSelectedPrinterStatus").textContent = `Cliente ${client}: ${rows.length} / ${base.length} impresoras`;
+  
+  $("vtPrinterBody").innerHTML = rows.map(p=>{
+    const isSel = DB_visitaPrinter?.serie===p.serie;
+    return `<tr class="${isSel?'selected':''}">
+      <td><button class="btn-sel ${isSel?'sel':''}" onclick="DB_visitaPrinter=DB_IMPRESORAS.find(x=>x.serie==='${p.serie}');updateVisitaPrinterTable();actualizarDash()">${isSel?'✓':'Seleccionar'}</button></td>
+      <td><b>${p.serie}</b><br><span style="font-size:10px">${p.codigo}</span></td>
+      <td>${p.modelo}</td>
+      <td><b>${p.sucursal}</b><br>${p.area}<br><span style="font-size:11px;color:#64748b">${p.ubicacion}</span></td>
+      <td>${p.bodega}</td>
+    </tr>`
+  }).join('') || `<tr><td colspan="5" style="text-align:center;color:#dc2626">Cliente ${client} sin impresoras en txt</td></tr>`;
+}
+
+function actualizarDash(){
+  const client = $("vtCliente")?.value || "";
+  const lista = client ? DB_IMPRESORAS.filter(p=>p.cliente===client) : DB_IMPRESORAS.slice(0,50);
+  $("dashBody").innerHTML = lista.map(p=>`
+    <tr class="${DB_visitaPrinter?.serie===p.serie?'selected':''}">
+      <td><b>${p.serie}</b><br><small>${p.codigo}</small></td>
+      <td>${p.modelo}<br><small style="color:#64748b">${p.sucursal} - ${p.area}</small></td>
+      <td>${p.ubicacion}</td>
+      <td>${p.cliente}</td>
+      <td><button class="btn-sel ${DB_visitaPrinter?.serie===p.serie?'sel':''}" onclick="DB_visitaPrinter=DB_IMPRESORAS.find(x=>x.serie==='${p.serie}');updateVisitaPrinterTable();actualizarDash()">Sel</button></td>
+    </tr>
+  `).join('');
+}
+
+function guardarVisita(){let h=JSON.parse(localStorage.getItem(keyVisita())||"[]");h.push({id:Date.now(),serie:DB_visitaPrinter.serie});localStorage.setItem(keyVisita(),JSON.stringify(h));actualizarVisitaHistorialTabla()}
+function actualizarVisitaHistorialTabla(){const hist=JSON.parse(localStorage.getItem(keyVisita())||"[]");$("kpiVisitas").textContent=hist.length}
+function cargarConteos(){const client=$("ctCliente").value; const base=DB_IMPRESORAS.filter(p=>!client||p.cliente===client); $("ctBody").innerHTML=base.map(p=>`<tr><td><b>${p.serie}</b></td><td>${p.modelo}</td><td><input data-serie="${p.serie}" placeholder="0" style="width:90px"></td></tr>`).join('')}
+function guardarConteos(){alert("Guardado")} function agregarInventario(){} function cargarInventario(){}
+
+// EJECUTA CARGA AL INICIO, ANTES QUE NADA
+cargarDatosPrimero();
+</script>
+</body>
+</html>
