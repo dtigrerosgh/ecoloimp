@@ -1,0 +1,101 @@
+A033;Acromax Laboratorio Químico Farmacéutico S.A.;28
+A000;AGPSA ALMACENES GENERALES DE PRODUCTOS SOCIEDAD ANONIMA;5
+C640;Alejandro Jose Minuche Henriquez  E.U.R.L.;3
+A026;American Call Center S.A.;17
+A468;Andigrain S.A.;1
+A371;Andinave S.A.;12
+A172;Andipuerto Guayaquil S.A.;6
+A456;Andipuerto Guayaquil S.A. *;11
+A428;Asia Shipping Ecuador S.A. ASE;4
+A391;Asociacion de Futbol del Guayas;1
+A443;Audesur S.A..- Quito;6
+B257;Biogemar S.A;8
+B258;BUREAU BPLEGAL S.A.;1
+L160;CACPLUS S.A  Centro de Negocios oficina virtual;1
+A062;Cargo-Mar Servicios S.A. CARGOMAR;2
+C139;Celco Cia. Ltda;4
+C681;Celco Cia. Ltda - Quito;1
+C665;Cepillos Plásticos Ecuador S.A. - CEPEC;6
+CH012;Chiveria S.A.;11
+C001;Cierfilms S.A.;6
+C672;Cierfilms S.A.*;1
+C667;Cierpronti S.A;5
+C673;Club de Leones Urdesa;1
+C655;Construcciones y Proyectos Civiles COPROCIV S.A.;1
+C337;CONVECTOR S.A.;2
+C657;Cooperativa de Ahorro y Credito Metropolitana Ltda.;1
+C680;CORANDE DEL ECUADOR CORANECUADOR CIA.LTDA;1
+C677;Corpincomcuatro S.A.;2
+D217;Dalkasa S.A.;2
+D220;DE Seguros;1
+D218;Delta Plastic C.A;1
+D226;DIANA-FOOD ECUADOR S A;7
+D097;Diteca S.A.;31
+E104;ECOLOIMP -   OFICINA;428
+E001;ECOLOIMP - BODEGA 2;5
+E169;Ecuabarnices S.A;10
+E234;Ecuabulk S.A.;3
+F232;Ecuador Kakao Processing PROECUAKAO S.A.;6
+E200;ECUAIMCO S.A.;5
+E244;Ecuapatria Cia. Ltda. Agencia Asesora Productora de Seguros;2
+E248;El Seis;1
+E240;Emergent Cold Ecuador S.A.S.;2
+E231;Empresarios y Asesores EMPASE C.A.;2
+E242;Equipos y Rentas EQUIRENT S.A.;1
+E221;Estructuras de Hierro EDEHSA S.A.;3
+D214;Exportaciones DUREXPORTA S.A.;25
+E236;Exportadora Total Seafood - TOTALSEAFOOD S.A;19
+F193;Fabrica de Envases  S.A. FADESA;37
+F237;Fadesa - Manta S.A.;4
+F081;Farbem S. A.;13
+C009;FARMEL Farmacos y Medicamentos CIA. LTDA.;1
+F181;Febres Cordero Compañia de Comercio S.A.;1
+F234;Fideicomiso BONAVILA;1
+F235;Fideicomiso Inmobiliario Integral VILANOVA;2
+F224;Fundacion Vilaseca;1
+G061;Gaviria & Gaviria S.A.;1
+G000;GEMELCORP S.A.;1
+G247;GREEN ENERGY CONSTRUCTIONS & INTEGRATION C&I SA;1
+G243;GSLINE Logistic S.A.*;1
+G239;Guitran S.A.;1
+I044;Iglesia de Jesucristo de los Santos de los Ultimos Dias;2
+I182;Industrial LINGESA S.A.;1
+I208;Inmoderna S.A.;2
+K026;King Ocean Ecuador  KINGOCEAN S.A.;5
+K028;Krapp S.A.;2
+L007;LA LLAVE S.A. de Comercio;17
+L030;La Union Compañia Nacional de Seguros S.A.;14
+L204;Laboratorios Rocnarf S.A;28
+L197;Leterago del Ecuador S.A. - Cuenca;2
+L196;Leterago del Ecuador S.A. - Guayaquil;32
+L134;Leterago del Ecuador S.A. - Quito;64
+L213;Limbomar S.A;16
+L019;Limbomar S.A;6
+L083;LIMBOPACK  S.A.S.;13
+L203;Lineas Aereas Nacionales Ecuador S.A.  Lan Ecuador;3
+M381;MAQHENSA  Representaciones S.A.;2
+P007;MDG-CARGO LINE S.A.S.;1
+M393;Mediterranean Shipping Company Ecuador;13
+M338;Megalabs-Pharma S.A.;7
+P272;Pacificlink S.A.;5
+P024;Plasticos Panamericanos PLAPASA S.A.;13
+P337;Produmar  S.A;18
+P078;Produmar S.A.;14
+P319;PRODUVENTAS;2
+P010;Promotora Inmobiliaria Portal  S.A. PROPORTALSA;1
+M407;PROSOL S. A.;1
+Q040;QC Terminales Ecuador S.A. QCTE;10
+Q0001;QCT Logistics S.A.;4
+T187;Semvra-Ecuador S.A.;6
+V213;Semvra-Veconsa S.A;19
+V212;Semvra-Veconsa S.A.;10
+S165;Seruvi S.A.;14
+S253;Silcexsa;1
+S268;Sociedad de Lucha Contra el Cancer del Ecuador SOLCA;213
+S209;Sociedades  Acuicolas AL-MAR, SOCALMAR S.A.;14
+L114;Tech Mahindra - Ecuador S.A.;5
+t191;Transbareti S.A;1
+U014;Universalcargo S.A.;5
+U044;Universidad Casa Grande;27
+V219;Vrokady  S.A;1
+W009;Wrensa S.A.;1

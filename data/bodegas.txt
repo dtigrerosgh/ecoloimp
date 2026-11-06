@@ -1,0 +1,280 @@
+304;A000 - AGPSA, 9 de Octubre
+306;A000 - AGPSA, Alborada
+303;A000 - AGPSA, Matriz Sucre
+305;A000 - AGPSA, Terminal
+302;A000 - AGPSA, Via Daule
+097;A026 - AMERICAN CALL CENTER, Guayaquil
+098;A026 - AMERICAN CALL CENTER, Quito
+067;A033 - ACROMAX, Cuenca
+041;A033 - ACROMAX, Guayaquil, Planta
+188;A062 - CARGOMAR
+030;A062 - CARGOMAR, Sur
+049;A172 - ANDIPUERTO, Centro
+289;A371 - ANDINAVE, Centro
+290;A371 - ANDINAVE, Manta
+007;A391 - ASOGUAYAS
+025;A428 - ASIA SHIPPING, Guayaquil
+131;A428 - ASIA SHIPPING, Quito
+062;A443 - AUDESUR, Quito
+036;A456 - ANDIPUERTO, Puerto
+066;A468 - ANDIGRAIN S.A.
+087;B257 - BIOGEMAR, San Pablo
+133;B258 - BUREAU
+080;C001 - CIERFILMS
+017;C009 - FARMEL, Guayaquil
+169;C139 - CELCO, Bodega
+296;C139 - CELCO, CONTABILIDAD
+297;C139 - CELCO, Dpto. Tecnico
+298;C139 - CELCO, Ventas
+288;C337 - CONVECTOR, Centro (P29)
+262;C337 - CONVECTOR, Sur Cargomar
+108;C640 - ALEJANDRO MINUCHE
+163;C655 - COPROCIV
+167;C657 - COOP. METROPOLITANA
+178;C665 - CEPEC
+106;C667 - CIERPRONTI
+052;C667 - CIERPRONTI
+141;C672 - CIERFILMS, Calidad
+189;C673 - CLUB DE LEONES, Urdesa
+246;C677 - CORPICONCUATRO, Cabeza de Vaca
+293;C677 - CORPICONCUATRO, Matriz (Durexporta)
+277;C680 - CORANDE
+307;C681 - CELCO UIO
+112;CH012 - CHIVERIA
+160;D097 - DITECA, El Coca
+021;D097 - DITECA, Guayaquil
+161;D097 - DITECA, Loja
+159;D097 - DITECA, Quito
+139;D214 - DUREXPORTA, Vía Daule
+180;D217 - DALKASA
+038;D218 - DELTA PLASTIC
+181;D220 - DE SEGUROS
+272;D226 - DIANA FOOD
+059;E104 - ECOLOIMP,  Area Técnica
+001;E104 - ECOLOIMP, Bodega 001
+002;E104 - ECOLOIMP, Bodega 002
+283;E104 - ECOLOIMP, Bodega 003 (Aquapine)
+046;E104 - ECOLOIMP, Bodega 004 (Producción)
+077;E169 - ECUABARNICES, Planta Km 24 vía Daule
+207;E200 - ECUAIMCO
+032;E221 - EDEHSA
+107;E231 - EMPASE
+268;E234 - ECUABULK, Administracion
+071;E234 - ECUABULK, Bodega
+273;E234 - ECUABULK, Contabilidad
+177;E236 - TOTALSEAFOOD
+243;E240 - EMERGENT COLD
+170;E242 - EQUIRENT
+156;E244 - ECUAPATRIA
+019;E248 - EL SEIS
+037;F081 - FARBEM, Norte
+179;F102 - FUNIBER, Bodega
+120;F193 - FADESA, Ave. Domingo Comin
+147;F193 - FADESA, El Universo
+150;F193 - FADESA, Plásticos, Bodega Jutecero
+129;F193 - FADESA, Plásticos, La Pradera
+009;F193 - FADESA, Quito
+103;F224 - FUNDACION GABRIEL VILASECA
+212;F232 - ECUAKAO
+040;F234 - BONAVILA, Daule
+127;F235 - VILANOVA, Salitre
+294;F235 - VILANOVA, SKY
+031;F237 - FADESA, Manta
+257;F237 - FADESA, Manta (Bodega de Chinos)
+279;G000 - GEMELCORP
+134;G061 - GAVIRIA & GAVIRIA, Edif. Induauto
+245;G239 - GUITRAN
+104;G243 - GS LINE LOGISTIC
+287;G247 - GPS
+166;I182 - LINGESA
+018;I208 - INMODERNA, Sky Building (P.3)
+105;K026 - KING OCEAN ECUADOR
+174;K028  - KRAPP
+003;L007 - LA LLAVE, Guayaquil
+013;L007 - LA LLAVE, Quito
+209;L019 - LIMBOMAR, Churete
+242;L030 - SEGUROS LA UNION
+247;L030 - SEGUROS LA UNION, Quito
+265;L083 - LIMBOPACK, Sopase
+016;L114 - TECH MAHINDRA, Guayaquil
+023;L114 - TECH MAHINDRA, Quito
+092;L134 - LETERAGO, Quito
+005;L196 - LETERAGO Gye - Bodega, Etiqueta
+008;L196 - LETERAGO Gye - Bodega, Logística 1
+072;L196 - LETERAGO, Gye - ADM Gerencia P2
+125;L196 - LETERAGO, Gye - Bodega  - Administracion A / B
+117;L196 - LETERAGO, Gye - Bodega - Auditoria Interna
+123;L196 - LETERAGO, Gye - Bodega (Dpto. Médico)
+095;L196 - LETERAGO, Gye - Bodega (Supervisores)
+183;L196 - LETERAGO, Gye - Bodega RR HH
+093;L196 - LETERAGO, Gye - Edif Centrum
+124;L196 - LETERAGO, Gye - Sta. Leonor (Talento Humano)
+253;L196 - LETERAGO, Via Daule / Logistica 2
+113;L197 - LETERAGO, Cuenca - Recepción
+137;L203 - LAN ECUADOR FUMIGACION
+035;L204 - ROCNARF San Felipe - BODEGA  BIP (W.E)
+152;L204 - ROCNARF, Cuenca
+149;L204 - ROCNARF, Matriz
+225;L204 - ROCNARF, Planta - Control de  Calidad (oficina)
+223;L204 - ROCNARF, Planta - Dirección Técnica
+220;L204 - ROCNARF, Planta - Instrumental
+224;L204 - ROCNARF, Planta - Recepción
+222;L204 - ROCNARF, Planta - Taller de Mantenimiento
+221;L204 - ROCNARF, Planta - Validación
+045;L204 - ROCNARF, Planta- Produccion (L.Z.)
+153;L204 - ROCNARF, Quito
+219;L204 - ROCNARF, San Felipe - Acondicionamiento (J.S.)
+278;L204 - ROCNARF, San Felipe - BMM
+218;L204 - ROCNARF, San Felipe - Bodega  Insumo (W.C)
+014;L204 - ROCNARF, San Felipe - BPT
+282;L204 - ROCNARF, San Felipe - Coord. Calibracion
+281;L204 - ROCNARF, San Felipe - DEVOLUCIONES
+286;L204 - ROCNARF, San Felipe - Dpto. Medico
+241;L204 - ROCNARF, San Felipe - Operaciones
+157;L210 -  LIGAPRO
+251;L213 - LIMBOMAR, Planta - Administracion
+231;L213 - LIMBOMAR, Planta - Combustible
+291;L213 - LIMBOMAR, Planta - COMEDOR
+292;L213 - LIMBOMAR, Planta - Contenedor de Adm.
+232;L213 - LIMBOMAR, Planta - Dispensario Médico
+252;L213 - LIMBOMAR, Planta - Garita
+226;L213 - LIMBOMAR, Planta - Mantenimiento
+227;L213 - LIMBOMAR, Planta - Monitoreo y Control
+228;L213 - LIMBOMAR, Planta - Operaciones  y  Logisitica
+230;L213 - LIMBOMAR, Planta - Producción Gerencia
+235;L213 - LIMBOMAR, Planta Calidad Laboratorio
+053;L213 - LIMBOMAR, Planta RR HH
+266;L213 - LIMBOMAR, Sector 900 (Bod Balanceado)
+299;L213 - LIMBOMAR, Setor 900 (Bod Balanceado)
+217;L213 - LIMBOMAR, Setor 900 (Producción)
+026;M381 - MAQHENSA
+048;M393 - MSC Mediterraneas Shipping Company
+027;M407 - PROSOL
+255;P007 - MDG, Cargo line
+210;P010 - PROPORTALSA
+184;P024 - PLAPASA
+240;P078 - PRODUMAR, Garzal 1
+261;P078 - PRODUMAR, Garzal 3
+154;P272 - PACIFICLINK
+258;P319 - PRODUVENTAS
+121;P337 - PRODUMAR
+197;Q0001 - QCT LOGISTICS
+109;Q040 - QC TERMINALES
+146;S165 - SERUVI, City Mall
+254;S165 - SERUVI, Mall del Norte
+244;S165 - SERUVI, Mall del Sur
+142;S165 - SERUVI, Village Plaza
+285;S209 - SOCALMAR, BODEGA DAJAHU
+213;S209 - SOCALMAR, Casa Sambo
+264;S209 - SOCALMAR, Salas nuevas
+301;S209 - SOCALMAR, VITABAL - VIA DAULE
+020;S253 - SILCEXSA
+208;S268 - SOLCA , Clínica Privada (P4)
+193;S268 - SOLCA, 26 Oncología, Consultorio, Srta. Evelyn Morales
+204;S268 - SOLCA, 27 Oncología Clínica
+079;S268 - SOLCA, Activo Fijo
+063;S268 - SOLCA, Adquisiones (P1)
+088;S268 - SOLCA, AEI Administración
+256;S268 - SOLCA, Agendamiento Rayos X
+171;S268 - SOLCA, Anesteciolgia Preadmision,15(P1)
+089;S268 - SOLCA, Anesteciología Quirofano
+075;S268 - SOLCA, Area Recuperación, Srta Carmen Bohorquez (P1)
+194;S268 - SOLCA, Asistente Dirección Financiera
+084;S268 - SOLCA, Auditoría Interna
+022;S268 - SOLCA, Auditoría Médica / GIP
+263;S268 - SOLCA, Babahoyo
+054;S268 - SOLCA, Banco  de  Sangre, Srta Sofia Mata
+033;S268 - SOLCA, Biblioteca, Srta. María Benalcazar
+083;S268 - SOLCA, Biología Molecular
+216;S268 - SOLCA, Bodega Central
+034;S268 - SOLCA, Cardiología/Preadmisión
+191;S268 - SOLCA, Casa Alojamiento
+145;S268 - SOLCA, Centro de Diagnostico Preventivo
+248;S268 - SOLCA, Cirugia Digestiva
+024;S268 - SOLCA, Citología
+100;S268 - SOLCA, Consulta Externa / Recepcion
+198;S268 - SOLCA, Consulta Externa, Administradora
+260;S268 - SOLCA, Consultorio 19
+068;S268 - SOLCA, Contabilidad
+028;S268 - SOLCA, Crédito
+192;S268 - SOLCA, Cuidados Paliativos, Dra. Mena Flor
+269;S268 - SOLCA, Dermatologia Consultorio 13
+214;S268 - SOLCA, DET -Construcciones  y  proyectos
+055;S268 - SOLCA, Dirección Médica (P3)
+111;S268 - SOLCA, Docencia e Investigación
+091;S268 - SOLCA, Emergencia (PB)
+064;S268 - SOLCA, Gastroenterología
+165;S268 - SOLCA, Gerencia General 2
+081;S268 - SOLCA, Gerencia Hospitalaria Administración
+096;S268 - SOLCA, Gerencia Radioterapia
+065;S268 - SOLCA, GIP
+259;S268 - SOLCA, Hematologia Consultorio
+211;S268 - SOLCA, Hematología, Hospitalización
+250;S268 - SOLCA, Hogar de Cristo
+011;S268 - SOLCA, Hospitalizacion P3
+085;S268 - SOLCA, Hospitalización Pediatría
+006;S268 - SOLCA, Hospitalización, Cristina Zambrano (P1)
+280;S268 - SOLCA, Jefatura Comercial (P.7)
+070;S268 - SOLCA, Jefatura Enfermería PB
+029;S268 - SOLCA, Laboratorio  Clinico - Bacterologia
+101;S268 - SOLCA, Laboratorios
+195;S268 - SOLCA, Lobby , Nixelys Morales
+138;S268 - SOLCA, Mastología
+203;S268 - SOLCA, Mastologia Cons.10
+043;S268 - SOLCA, Medicina Nuclear PET
+078;S268 - SOLCA, Medicina Transfucional, Hemobiología P.B.
+099;S268 - SOLCA, Neumología, Dr. Fernando Cano
+126;S268 - SOLCA, Neurocirugia
+051;S268 - SOLCA, Nutrición Clínica
+130;S268 - SOLCA, Oncologia  Clinica 23
+173;S268 - SOLCA, Oncologia 25
+215;S268 - SOLCA, Oncología Clínica 22
+270;S268 - SOLCA, Oncologia consultorio 24
+135;S268 - SOLCA, Oncología, Recepción, Yomaria Tamaño
+090;S268 - SOLCA, Patología
+200;S268 - SOLCA, Patologia, Cubiculo A (PB)
+175;S268 - SOLCA, Piel y Sarcoma consult 07
+276;S268 - SOLCA, Preadmision - Caja Ventanilla 24
+190;S268 - SOLCA, Preadmisión, Administración, Ma. Jose Guallichico
+086;S268 - SOLCA, Preadmisión, Jetatura Trabajo Social
+144;S268 - SOLCA, Psicologia # 18
+158;S268 - SOLCA, Quimioterapia Adulto
+199;S268 - SOLCA, Quirofano
+094;S268 - SOLCA, Quirofano, Sub-Bodega (P2)
+182;S268 - SOLCA, Radiología
+185;S268 - SOLCA, Radioprotección
+047;S268 - SOLCA, Radioterapia 1
+151;S268 - SOLCA, RRHH, Angi Benites
+237;S268 - SOLCA, Secretaria de Urología
+060;S268 - SOLCA, Servicios Generales,
+274;S268 - SOLCA, Terapia Respiratoria
+155;S268 - SOLCA, TesorerÍa
+271;S268 - SOLCA, Traumatologia
+050;S268 - SOLCA, UCI (P2)
+196;S268 - SOLCA, Unidad Pediatrica
+004;S268 - SOLCA, UTMO
+015;S268 - SOLCA,Ginecologia
+249;S268 - SOLCA,Servicio al Paciente Lobby
+187;T187 - TROPICALIMENTOS, CHIVERIA
+102;T187 - TROPICALIMENTOS, Quito
+295;T187 - TROPICALIMENTOS, SKY
+073;T187 - TROPICALIMENTOS,Vía Daule
+176;T191 - TRANSBARETI
+164;Tecnicos, Aaron Rugel
+239;Tecnicos, Alejandro Rojas
+202;Tecnicos, Angel  Rugel
+168;Tecnicos, Carlos  Baque
+186;Tecnicos, Horacio Chilan
+300;Tecnicos, Jimmy Romero
+140;Tecnicos, Petter Mariño
+206;Tecnicos, Ruben Barrera
+012;U014 - UNIVERSAL CARGO
+122;U014 - UNIVERSAL CARGO, Quito
+069;U044 - UCG Universidad Casa Grande
+136;V212 - VECONSA, Jujan
+201;V213 - INOVACION  (Chiveria)
+057;V213 - VECONSA DAULE, Sky
+148;V213 - VECONSA, Sabanilla
+143;V213 - VECONSA, Vía Daule
+162;V219 - VROKADY
+275;W009 - WRENSA
